@@ -1,21 +1,22 @@
 class Tidymymac < Formula
   desc "macOS storage cleanup tool with an interactive TUI"
   homepage "https://github.com/viniciussouzao/tidymymac"
-  url "https://github.com/viniciussouzao/tidymymac/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "7515bf959b73b956ceb967351c7e299cbb3668a53d35f9c770eb72e00d93ced6"
   license "MIT"
+  version "0.1.0"
 
-  depends_on "go" => :build
+  on_arm do
+    url "https://github.com/viniciussouzao/tidymymac/releases/download/v0.1.0/tidymymac-v0.1.0-darwin-arm64.tar.gz"
+    sha256 "e4db0a88f3fa7ff03b806fd0875029f7136f5c98077bbdf4f329965a053b8e2d"
+  end
+
+  on_intel do
+    url "https://github.com/viniciussouzao/tidymymac/releases/download/v0.1.0/tidymymac-v0.1.0-darwin-amd64.tar.gz"
+    sha256 "0cc5e61846329af349bb34c674c4ebabe11bda7b1b2c0bbb96735ac0dbfecfa1"
+  end
 
   def install
-    ldflags = %W[
-      -s -w
-      -X github.com/viniciussouzao/tidymymac/internal/buildinfo.Version=v#{version}
-      -X github.com/viniciussouzao/tidymymac/internal/buildinfo.Commit=homebrew
-      -X github.com/viniciussouzao/tidymymac/internal/buildinfo.BuildDate=#{time.iso8601}
-    ]
-
-    system "go", "build", *std_go_args(ldflags:), "./cmd/tidymymac"
+    binary_name = Hardware::CPU.arm? ? "tidymymac-darwin-arm64" : "tidymymac-darwin-amd64"
+    bin.install binary_name => "tidymymac"
   end
 
   test do

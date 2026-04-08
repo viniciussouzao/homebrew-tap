@@ -5,10 +5,7 @@ class Tidymymac < Formula
   sha256 "7515bf959b73b956ceb967351c7e299cbb3668a53d35f9c770eb72e00d93ced6"
   license "MIT"
 
-  bottle :unneeded
-
   depends_on "go" => :build
-  depends_on :macos
 
   def install
     ldflags = %W[

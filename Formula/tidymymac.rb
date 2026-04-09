@@ -2,16 +2,16 @@ class Tidymymac < Formula
   desc "macOS storage cleanup tool with an interactive TUI"
   homepage "https://github.com/viniciussouzao/tidymymac"
   license "MIT"
-  version "0.1.0"
+  version "1.0.0"
 
   on_arm do
-    url "https://github.com/viniciussouzao/tidymymac/releases/download/v0.1.0/tidymymac-v0.1.0-darwin-arm64.tar.gz"
-    sha256 "e4db0a88f3fa7ff03b806fd0875029f7136f5c98077bbdf4f329965a053b8e2d"
+    url "https://github.com/viniciussouzao/tidymymac/releases/download/v1.0.0/tidymymac-v1.0.0-darwin-arm64.tar.gz"
+    sha256 "88e1cb74b4c3cf5aa2fc9f018c3ec25c47fc2f0de48a25cf43500ebaa003447f"
   end
 
   on_intel do
-    url "https://github.com/viniciussouzao/tidymymac/releases/download/v0.1.0/tidymymac-v0.1.0-darwin-amd64.tar.gz"
-    sha256 "0cc5e61846329af349bb34c674c4ebabe11bda7b1b2c0bbb96735ac0dbfecfa1"
+    url "https://github.com/viniciussouzao/tidymymac/releases/download/v1.0.0/tidymymac-v1.0.0-darwin-amd64.tar.gz"
+    sha256 "574a0a379b7bbfaf3b6bd4e03f0ed4ddd6dc7241776c5d3209f5f8943397038f"
   end
 
   def install

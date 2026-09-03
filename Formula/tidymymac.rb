@@ -2,7 +2,6 @@ class Tidymymac < Formula
   desc "macOS storage cleanup tool with an interactive TUI"
   homepage "https://github.com/viniciussouzao/tidymymac"
   license "MIT"
-  version "1.2"
 
   on_arm do
     url "https://github.com/viniciussouzao/tidymymac/releases/download/v1.2/tidymymac-v1.2-darwin-arm64.tar.gz"

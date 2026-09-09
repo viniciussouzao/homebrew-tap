@@ -4,11 +4,11 @@ class Tidymymac < Formula
   license "MIT"
 
   if Hardware::CPU.arm?
-    url "https://github.com/viniciussouzao/tidymymac/releases/download/v1.2.1/tidymymac-v1.2.1-darwin-arm64.tar.gz"
-    sha256 "f40b28cc921060bab253d289788107cb751e949a4c560bd609b2d0808436b49b"
+    url "https://github.com/viniciussouzao/tidymymac/releases/download/v1.2.2/tidymymac-v1.2.2-darwin-arm64.tar.gz"
+    sha256 "9d3e657ddf1c2aa6fe289d4b482a7be164e524ac8a2f3c91172e28a4ac580c13"
   else
-    url "https://github.com/viniciussouzao/tidymymac/releases/download/v1.2.1/tidymymac-v1.2.1-darwin-amd64.tar.gz"
-    sha256 "a669363d2aa18f2bb4a723d8091dab84f90ea89cc4d774241ca78de84e10e7fd"
+    url "https://github.com/viniciussouzao/tidymymac/releases/download/v1.2.2/tidymymac-v1.2.2-darwin-amd64.tar.gz"
+    sha256 "45934744f49a8327eec10c2cc5b6f6fca9deb7740b2100476aa6dbc2c5fff2b0"
   end
 
   def install

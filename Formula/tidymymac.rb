@@ -5,10 +5,10 @@ class Tidymymac < Formula
 
   if Hardware::CPU.arm?
     url "https://github.com/viniciussouzao/tidymymac/releases/download/v1.2.2/tidymymac-v1.2.2-darwin-arm64.tar.gz"
-    sha256 "9d3e657ddf1c2aa6fe289d4b482a7be164e524ac8a2f3c91172e28a4ac580c13"
+    sha256 "93eb58d5a2ab6a5bf50f2246c327f40921f5716a415b40c2194eb038db040f04"
   else
     url "https://github.com/viniciussouzao/tidymymac/releases/download/v1.2.2/tidymymac-v1.2.2-darwin-amd64.tar.gz"
-    sha256 "45934744f49a8327eec10c2cc5b6f6fca9deb7740b2100476aa6dbc2c5fff2b0"
+    sha256 "7cbb1b009edbb6a93132f5754ce88a43611ba40cbb2866108a1a7e1b2c2f4a8b"
   end
 
   def install

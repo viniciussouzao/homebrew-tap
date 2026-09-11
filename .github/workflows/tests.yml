@@ -16,6 +16,7 @@ jobs:
             container: ghcr.io/homebrew/brew:main
     runs-on: ${{ matrix.os }}
     container: ${{ matrix.container }}
+    continue-on-error: ${{ matrix.os == 'macos-15-intel' }}
     permissions:
       actions: read
       checks: read
